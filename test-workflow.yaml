@@ -1,0 +1,14 @@
+kind: Workflow
+metadata:
+  generateName: test-cli-
+spec:
+  entrypoint: main
+  templates:
+  - name: main
+    container:
+      image: docker/whalesay:latest
+      command:
+      - bash
+      - -c
+      args:
+      - "echo Hello, this is a CLI test"
